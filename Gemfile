@@ -8,6 +8,8 @@ ruby "3.2.2"
 # gem "rails", "~> 7.0.5"
 gem 'rails', '7.0.5.1'
 
+gem 'racc', '1.7.1'
+
 # env
 gem 'dotenv-rails'
 

@@ -1,0 +1,51 @@
+<h1>Job List</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Context</th>
+      <th>Frontend</th>
+      <th>Backend</th>
+      <th>Infra</th>
+      <th>Prefecture</th>
+      <th>Telework</th>
+      <th>Startdate</th>
+      <th>Enddate</th>
+      <th>Physical</th>
+      <th>Intellectual</th>
+      <th>Psychological</th>
+      <th>Developmental</th>
+      <th>Remarks</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @jobs.each do |job| %>
+      <tr>
+        <td><%= job.id %></td>
+        <td><%= job.title %></td>
+        <td><%= job.context %></td>
+        <td><%= job.frontend %></td>
+        <td><%= job.backend %></td>
+        <td><%= job.infra %></td>
+        <td><%= job.prefecture %></td>
+        <td><%= job.telework %></td>
+        <td><%= job.startdate %></td>
+        <td><%= job.enddate %></td>
+        <td><%= job.physical %></td>
+        <td><%= job.intellectual %></td>
+        <td><%= job.psychological %></td>
+        <td><%= job.developmental %></td>
+        <td><%= job.remarks %></td>
+        <td><%= link_to 'Show', job %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Job', new_job_path %>
